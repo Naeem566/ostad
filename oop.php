@@ -98,3 +98,4 @@ echo "Available Copies of '" . $book1->getTitle() . "': " . $book1->getAvailable
 echo "Available Copies of '" . $book2->getTitle() . "': " . $book2->getAvailableCopies() . "\n";
 
 ?>
+
