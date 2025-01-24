@@ -1,39 +1,11 @@
--- Dumping data for table `blogs`
-INSERT INTO blogs(title, body, category_id, author_id)
-VALUES 
-  ("My Blog", "My Blogs Content", 2, 2),
-  ("The Future of AI", "Content about AI advancements", 3, 3),
-  ("Travel Diaries", "Exploring new places around the world", 1, 2),
-  ("Healthy Living", "Tips on maintaining a balanced lifestyle", 4, 1),
-  ("Tech Trends 2025", "Predictions for the next decade in technology", 3, 4),
-  ("Life Lessons", "What I've learned through experiences", 5, 2),
-  ("Cooking 101", "Simple recipes for beginners", 6, 3),
-  ("Fitness Goals", "How to stay fit and healthy in 2025", 4, 5),
-  ("Gadget Reviews", "An in-depth review of the latest tech gadgets", 3, 1),
-  ("Art and Creativity", "Exploring the world of modern art", 7, 4);
+CREATE DATABASE photo_gallery;
 
--- Dumping data for table `categories`
-INSERT INTO categories(category_name) VALUES
-('Technology'),
-('Health & Wellness'),
-('Lifestyle'),
-('Travel'),
-('Education'),
-('Food & Drink'),
-('Finance'),
-('Entertainment'),
-('Sports'),
-('Fashion');
+USE photo_gallery;
 
--- Dumping data for table `authors`
-INSERT INTO authors (author_name) VALUES
-('HR'),
-('Finance'),
-('Alice'),
-('Bob'),
-('Chalier'),
-('Diana'),
-('Eve'),
-('John'),
-('Sophia'),
-('Michael');
+CREATE TABLE photos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    image_path VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
